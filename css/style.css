@@ -1,8 +1,11 @@
+/* reset */
 *{
    box-sizing: border-box;
    margin: 0;
    padding: 0;
 }
+
+/* mix */
 .container{
    width: 100%;
    height: 100vh;
@@ -11,7 +14,7 @@
 }
 .appWindow{
    width: 80%;
-   height: 90%;
+   height: 95%;
    margin: auto;
    display: flex;
    border-radius: 10px;
@@ -22,19 +25,21 @@
    width: 35%;
    height: 100%;
    background-color: white;
-   border-right: 1px solid black;
+   border-right: 1px solid #6B7376;
 }
 .chat{
    width: 65%;
    height: 100%;
    background-color: white;
 }
+
+/* top nav bars */
 .contactsNav,
 .chatNav{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 70px;
+   height: 80px;
    background-color:  #DBDBD2;
    padding:0 25px;
 }
@@ -65,4 +70,28 @@
 .contactsNav .settings ul i:hover,
 .chatNav .settings ul i:hover{
    color: #6B7376
+}
+
+/* ACTIVE NOTIFICATIONS */
+.notifications{
+   background-color: #8EDAFC;
+   display: flex;
+   align-items: center;
+   height: 90px;
+   padding:0 25px;
+}
+.notifications .icon{
+   width: 50px;
+   height: 50px;
+   background-color: #fff;
+   color: #8EDAFC;
+   border-radius: 50%;
+   font-size: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 15px;
+}
+.notifications a{
+   color: #6B7376;
 }
