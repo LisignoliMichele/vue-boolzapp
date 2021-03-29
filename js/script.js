@@ -82,7 +82,10 @@ var app = new Vue(
                     }
                 ],
             },
-         ]
-      }
+         ],
+         contactIndex: 0,
+      },
+      methods:{
+        }
    }
 );

@@ -191,7 +191,7 @@
    position: absolute;
    bottom: 5px;
    right:10px;
-   font-size: 12px;
+   font-size: 9px;
 }
 .messages li:hover::after{
    font-family: "Font Awesome 5 Free";

@@ -59,9 +59,9 @@
                   <!-- CONTACTS LIST-->
                   <div class="contact-list">
                      <ul>
-                        <li v-for="(contact) in contacts">
+                        <li v-for="(contact, index) in contacts" @click="contactIndex = index" :class="contactIndex == index ? 'active' : '' ">
                            <div class="userPhoto">
-                              <img v-bind:src="contact.avatar" alt="">
+                              <img v-bind:src="contact.avatar" alt="user avatar">
                            </div>
                            <p>{{contact.name}}</p>
                         </li>
@@ -72,10 +72,10 @@
                <!-- /LEFT SIDE -->
                <!-- RIGHT SIDE -->
                <div class="chat">
-                  <nav class="chatNav">
+                  <nav class="chatNav" >
                      <div class="userInfo">
-                        <img src="img/avatar_6.jpg" alt="profile photo">
-                        <p>Erica</p>
+                        <img v-bind:src="contacts[contactIndex].avatar" alt="user avatar">
+                        <p>{{contacts[contactIndex].name}}</p>
                      </div>
                      <div class="settings">
                         <ul>
@@ -88,7 +88,7 @@
                   <div class="chatRoom">
                      <div class="messages">
                         <ul>
-                           <li v-for="(message) in contacts[0].messages" :class="{sented: message.status == 'sent'}">
+                           <li v-for="(message) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}">
                               {{message.message}}
                               <time>{{message.date}}</time>
                            </li>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="microphone">
                            <i class="fas fa-microphone"></i>
-                        </div>å
+                        </div>
                   </div>
                </div>
                <!-- /RIGHT SIDE -->
