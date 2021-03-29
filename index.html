@@ -23,8 +23,8 @@
                   <!-- NAV-BAR -->
                   <nav class="contactsNav">
                      <div class="userInfo">
-                        <img src="img/avatar_1.jpg" alt="profile photo">
-                        <p>Nome Utente</p>
+                        <img src="img/avatar_5.jpg" alt="profile photo">
+                        <p>Michele Lisignoli</p>
                      </div>
                      <div class="settings">
                         <ul>
@@ -88,17 +88,9 @@
                   <div class="chatRoom">
                      <div class="messages">
                         <ul>
-                           <li class="recived">
-                              Ricordati di comprare il pane che oggi arriva mia mamma
-                              <time>30-03-2021  -  10.00am</time>
-                           </li>
-                           <li class="recived">
-                              Sei ancora vivo? Mamma si si é gia lamentata del prato, ti avevo detto di tagliarlo!
-                              <time>30-03-2021  -  1.00pm</time>
-                           </li>
-                           <li class="sented">
-                              Ciao Bellissima! impegno improvviso, arrivo tardi...
-                              <time>30-03-2021  -  6.00pm</time>
+                           <li v-for="(message) in contacts[0].messages" :class="{sented: message.status == 'sent'}">
+                              {{message.message}}
+                              <time>{{message.date}}</time>
                            </li>
                         </ul>
                      </div>
@@ -112,7 +104,7 @@
                         </div>
                         <div class="microphone">
                            <i class="fas fa-microphone"></i>
-                        </div>
+                        </div>å
                   </div>
                </div>
                <!-- /RIGHT SIDE -->

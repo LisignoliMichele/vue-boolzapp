@@ -181,8 +181,6 @@
    padding: 20px;
    border-radius: 10px;
    position: relative;
-}
-.chatRoom .messages li.recived{
    background-color: #ffffff;
 }
 .chatRoom .messages li.sented{
