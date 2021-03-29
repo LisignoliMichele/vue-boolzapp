@@ -24,7 +24,7 @@
 .contacts{
    width: 35%;
    height: 100%;
-   background-color: white;
+   background-color: #fafafa;
    border-right: 1px solid #cacaca;
 }
 .chat{
@@ -40,7 +40,7 @@
    justify-content: space-between;
    align-items: center;
    height: 80px;
-   background-color: #DBDBD2;
+   background-color: #EAEAEA;
    padding:0 25px;
 }
 .contacts img,
@@ -99,11 +99,11 @@
 /* SEARCH CONTACT */
 .searchContact{
    display: flex;
-   padding: 5px;
-   height: 40px;
+   padding: 10px;
+   height: 60px;
 }
 .searchContact .icon{
-   width: 10%;
+   width: 15%;
    background-color: #fff;
    text-align: center;
    color: #B1B1B1;
@@ -114,8 +114,9 @@
 }
 .searchContact .input{
    border: 1px solid #fafafa;
+   background-color: #fff;
    border-left: transparent;
-   width: 90%;
+   width: 85%;
    display: flex;
    align-items: center;
 }
@@ -123,7 +124,25 @@
    border: transparent;
    width: 100%;
    margin-left: 30px;
+   
 }
 .searchContact .input input:focus{
    outline: transparent;
+}
+
+/* CONTACTS LIST */
+.contact-list li{
+   height: 100px;
+   width: 100%;
+   background-color: #ffff;
+   display: flex;
+   border-top: 1px solid #EAEAEA;
+   align-items: center;
+
+}
+.contact-list li img{
+   margin-left: 25px;
+}  
+.contact-list li.active{
+   background-color: #EAEAEA;
 }
