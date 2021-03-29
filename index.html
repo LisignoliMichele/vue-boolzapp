@@ -15,7 +15,7 @@
       <title>BOLZAPP</title>
    </head>
    <body>
-      <div id="whatsboolapp">
+      <div id="app">
          <div class="container">
             <div class="appWindow">
                <!-- LEFT SIDE -->
@@ -59,53 +59,11 @@
                   <!-- CONTACTS LIST-->
                   <div class="contact-list">
                      <ul>
-                        <li class="active">
+                        <li v-for="(contact) in contacts">
                            <div class="userPhoto">
-                              <img src="img/avatar_6.jpg" alt="">
+                              <img v-bind:src="contact.avatar" alt="">
                            </div>
-                           <p>Erica</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_2.jpg" alt="">
-                           </div>
-                           <p>Jack</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_3.jpg" alt="">
-                           </div>
-                           <p>Alessandro</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_4.jpg" alt="">
-                           </div>
-                           <p>Gabriele</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_5.jpg" alt="">
-                           </div>
-                           <p>Samuele</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_7.jpg" alt="">
-                           </div>
-                           <p>Luca</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_8.jpg" alt="">
-                           </div>
-                           <p>Matteo</p>
-                        </li>
-                        <li>
-                           <div class="userPhoto">
-                              <img src="img/avatar_9.jpg" alt="">
-                           </div>
-                           <p>Maria</p>
+                           <p>{{contact.name}}</p>
                         </li>
                      </ul>
                   </div>
