@@ -9,12 +9,12 @@
 .container{
    width: 100%;
    height: 100vh;
-   background: linear-gradient(to top, #DBDBD2 85%, #009688 85%);
+   background: linear-gradient(to top, #DBDBD2 80%, #009688 80%);
    display: flex;
 }
 .appWindow{
    width: 80%;
-   height: 95%;
+   height: 90%;
    margin: auto;
    display: flex;
    border-radius: 10px;
@@ -66,14 +66,14 @@
 }
 .contactsNav .settings ul i,
 .chatNav .settings ul i{
-   margin-left: 15px;
+   margin-left: 20px;
    font-size: 20px;
    color: #B1B1B1;
    cursor: pointer;
 }
 .contactsNav .settings ul i:hover,
 .chatNav .settings ul i:hover{
-   color: #6B7376
+   color: #6B7376;
 }
 
 /* ACTIVE NOTIFICATIONS */
@@ -99,7 +99,9 @@
 .notifications a{
    color: #6B7376;
 }
-
+.notifications a:hover{
+   color: #000;
+}
 /* SEARCH CONTACT */
 .searchContact{
    display: flex;
@@ -136,8 +138,7 @@
 
 /* CONTACTS LIST */
 .contact-list{
-
-overflow: scroll;
+   overflow: scroll;
 }
 .contact-list li{
    height: 100px;
@@ -164,11 +165,76 @@ overflow: scroll;
   overflow: scroll;
   margin: auto;
   height: 100%;
+  width: 100%;
+}
+.chatRoom .messages{
+   height: 100%;
+   width: 100%;
+   padding: 50px 60px 0 60px
+}
+.chatRoom .messages ul{
+   list-style: none;
+}
+.chatRoom .messages li{
+   width: 45%;
+   margin-bottom: 20px;
+   padding: 20px;
+   border-radius: 10px;
+   position: relative;
+}
+.chatRoom .messages li.recived{
+   background-color: #ffffff;
+}
+.chatRoom .messages li.sented{
+   background-color: #D5F9BA;
+   margin-left: 55%;
+}
+.chatRoom .messages li time{
+   position: absolute;
+   bottom: 5px;
+   right:10px;
+   font-size: 12px;
+}
+.messages li:hover::after{
+   font-family: "Font Awesome 5 Free";
+   content: "\f078";
+   font-weight: 900;
+   color: #6B7376;;
+   margin-right: 15px;
+   position: absolute;
+   top: 10px;
+   right: 0;
 }
 
+/* messageInput */
 .messageInput{
    width: 100%;
-   min-height: 50px;
-   background-color: tomato;
-   
+   min-height: 60px;
+   background-color: #EAEAEA;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 25px;
+   align-items: center;
+}
+.messageInput .textInput{
+   width: 90%;
+   border-radius: 5px;
+   overflow: hidden;
+}
+.messageInput .textInput input{
+   border: transparent;
+   height: 40px;
+   width: 100%;
+   padding-left: 40px;
+}
+.messageInput .textInput input:focus{
+   outline: transparent;
+}
+.messageInput i{
+   font-size: 25px;
+   color: #B1B1B1;
+   cursor: pointer;
+}
+.messageInput i:hover{
+   color: #6B7376
 }
