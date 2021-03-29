@@ -25,7 +25,7 @@
    width: 35%;
    height: 100%;
    background-color: white;
-   border-right: 1px solid #6B7376;
+   border-right: 1px solid #cacaca;
 }
 .chat{
    width: 65%;
@@ -40,7 +40,7 @@
    justify-content: space-between;
    align-items: center;
    height: 80px;
-   background-color:  #DBDBD2;
+   background-color: #DBDBD2;
    padding:0 25px;
 }
 .contacts img,
@@ -94,4 +94,36 @@
 }
 .notifications a{
    color: #6B7376;
+}
+
+/* SEARCH CONTACT */
+.searchContact{
+   display: flex;
+   padding: 5px;
+   height: 40px;
+}
+.searchContact .icon{
+   width: 10%;
+   background-color: #fff;
+   text-align: center;
+   color: #B1B1B1;
+   border: 1px solid #fafafa;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.searchContact .input{
+   border: 1px solid #fafafa;
+   border-left: transparent;
+   width: 90%;
+   display: flex;
+   align-items: center;
+}
+.searchContact .input input{
+   border: transparent;
+   width: 100%;
+   margin-left: 30px;
+}
+.searchContact .input input:focus{
+   outline: transparent;
 }
