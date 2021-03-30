@@ -83,27 +83,18 @@ var app = new Vue(
                 ],
             },
          ],
-        //  enterText:'',
+         enterText:'',
          contactIndex: 0,
-         newMessage:{
-            date: '29/03/2020 21:50:00',
-            message: "",
-            status: 'sent'
-         },
       },
       methods:{
-        // printMessage: function(){
-        //     if (this.enterText !== ''){
-        //         this.newMessage.message = this.enterText
-        //         this.contacts[this.contactIndex].messages.push(this.newMessage);
-        //         this.enterText = '';
-        //     }
-            
-        // }
         printMessage: function(){
-            if (this.newMessage.message !== ''){
-                this.contacts[this.contactIndex].messages.push(this.newMessage);
-                this.newMessage.message = '';
+            if (this.enterText !== ''){
+                this.contacts[this.contactIndex].messages.push({
+                    date: '29/03/2020 21:50:00',
+                    message: this.enterText,
+                    status: 'sent'
+                    });
+                this.enterText = '';
             }
             
         }
