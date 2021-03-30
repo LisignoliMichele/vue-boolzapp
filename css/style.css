@@ -12,6 +12,11 @@
    background: linear-gradient(to top, #DBDBD2 80%, #009688 80%);
    display: flex;
 }
+.clearfix::after{ 
+   content: "";
+   display: table;
+   clear: both;
+}
 .appWindow{
    width: 80%;
    height: 90%;
@@ -174,18 +179,22 @@
 }
 .chatRoom .messages ul{
    list-style: none;
+   display: flex;
+   flex-direction: column;
 }
 .chatRoom .messages li{
-   width: 45%;
+   max-width: 60%;
+   min-width: 25%;
    margin-bottom: 20px;
    padding: 20px;
    border-radius: 10px;
    position: relative;
    background-color: #ffffff;
+   align-self: flex-start;
 }
 .chatRoom .messages li.sented{
    background-color: #D5F9BA;
-   margin-left: 55%;
+   align-self: flex-end;
 }
 .chatRoom .messages li time{
    position: absolute;
@@ -197,7 +206,7 @@
    font-family: "Font Awesome 5 Free";
    content: "\f078";
    font-weight: 900;
-   font-size: 13px;
+   font-size: 14px;
    color: #6B7376;;
    margin-right: 15px;
    position: absolute;

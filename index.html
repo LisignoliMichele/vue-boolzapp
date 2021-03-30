@@ -88,7 +88,7 @@
                   <div class="chatRoom">
                      <div class="messages">
                         <ul>
-                           <li v-for="(message) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}">
+                           <li class="clearfix" v-for="(message) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}">
                               {{message.message}}
                               <time>{{message.date}}</time>
                            </li>
