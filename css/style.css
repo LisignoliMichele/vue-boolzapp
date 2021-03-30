@@ -197,11 +197,12 @@
    font-family: "Font Awesome 5 Free";
    content: "\f078";
    font-weight: 900;
+   font-size: 13px;
    color: #6B7376;;
    margin-right: 15px;
    position: absolute;
-   top: 10px;
-   right: 0;
+   top: 5px;
+   right: -5px;
 }
 
 /* messageInput */

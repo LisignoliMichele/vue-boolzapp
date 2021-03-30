@@ -100,7 +100,7 @@
                            <i class="far fa-smile"></i>
                         </div>
                         <div class="textInput">
-                           <input type="text" placeholder="Scrivi un messaggio">
+                           <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyDown.13="printMessage">
                         </div>
                         <div class="microphone">
                            <i class="fas fa-microphone"></i>
