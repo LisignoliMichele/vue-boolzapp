@@ -85,6 +85,7 @@ var app = new Vue(
          ],
          enterText:'',
          contactIndex: 0,
+         search: '',
       },
       methods:{
         answer: function(){
@@ -105,6 +106,18 @@ var app = new Vue(
                  setTimeout(this.answer, 1000)
             }
         },
+        filteredItems() {
+            return this.items.filter(item => {
+               return item.type.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+            })
+          }
+    },
+    computed:{
+        filtredContacts: function(){
+            return this.contacts.filter((contact) =>{
+                return contact.name.toLowerCase().match(this.search.toLowerCase());
+            });
+        }
     }
    }
 );
