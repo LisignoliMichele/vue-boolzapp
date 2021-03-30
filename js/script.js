@@ -87,6 +87,13 @@ var app = new Vue(
          contactIndex: 0,
       },
       methods:{
+        answer: function(){
+            this.contacts[this.contactIndex].messages.push({
+                date: '29/03/2020 21:50:00',
+                message: "ok",
+                status: 'received'
+                });
+        },
         printMessage: function(){
             if (this.enterText !== ''){
                 this.contacts[this.contactIndex].messages.push({
@@ -94,10 +101,10 @@ var app = new Vue(
                     message: this.enterText,
                     status: 'sent'
                     });
-                this.enterText = '';
+                 this.enterText = '';
+                 setTimeout(this.answer, 1000);
             }
-            
-        }
+        },
     }
    }
 );
