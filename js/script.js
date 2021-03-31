@@ -86,7 +86,7 @@ var app = new Vue(
          enterText:'',
          contactIndex: 0,
          search: '',
-         show: '',
+         visible: '',
       },
       methods:{
         answer: function(){
@@ -107,13 +107,17 @@ var app = new Vue(
                  setTimeout(this.answer, 1000)
             }
         }, 
-        toggleShow: function(){
-                if (this.show == '' || this.show == 'hide'){
-                    this.show = "visible";
-                }else if (this.show == "visible"){
-                    this.show = "hide";
+        toggleVisible: function(){
+                if (this.visible == '' || this.visible == 'hide'){
+                    this.visible = "visible";
+                }else if (this.visible == "visible"){
+                    this.visible = "hide";
                 }
             },
+            deleteMessage: function(messageIndex){
+                this.contacts[this.contactIndex].messages.splice(messageIndex, 1);
+                this.visible = "hide";
+             },
     },
     computed:{
         filtredContacts: function(){

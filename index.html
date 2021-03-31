@@ -88,13 +88,13 @@
                   <div class="chatRoom">
                      <div class="messages">
                         <ul>
-                           <li v-for="(message) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}" @mouseleave="show = '' ">
+                           <li v-for="(message, index) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}" @mouseleave="visible = '' ">
                               {{message.message}}
                               <time>{{message.date}}</time>
                               <div class="messageSettings">
-                                 <i @click="toggleShow" class="fas fa-sort-down"></i>
-                                 <div :class="show" class="dropDownMenu">
-                                    <p>Elimina messaggio</p>
+                                 <i @click="toggleVisible" class="fas fa-sort-down"></i>
+                                 <div :class="visible" class="dropDownMenu">
+                                    <p @click="deleteMessage(index)">Elimina messaggio</p>
                                  </div>
                               </div>
                            </li>
