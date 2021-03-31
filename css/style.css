@@ -20,6 +20,7 @@
    border-radius: 10px;
    overflow: hidden;
    font-family: 'Lato', sans-serif;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 .contacts{
    width: 35%;
@@ -197,18 +198,45 @@
    right:10px;
    font-size: 9px;
 }
-.messages li:hover::after{
-   font-family: "Font Awesome 5 Free";
-   content: "\f078";
-   font-weight: 900;
+.messages li .messageSettings{
    font-size: 14px;
-   color: #6B7376;;
-   margin-right: 15px;
+   color: #6B7376;
    position: absolute;
-   top: 5px;
-   right: -5px;
+   top: 0px;
+   right: 7px;
+   display: none;
 }
-
+.messages li:hover .messageSettings{
+   display: block;
+}
+.messages li .messageSettings i{
+   position: relative;
+   cursor: pointer;
+}
+.dropDownMenu{
+   position: absolute;
+   white-space: nowrap;
+   left: -114px;
+   top: 22px;
+   background-color: #ffffff;
+   box-shadow: 0px 0 5px;
+   padding: 10px;
+   border-radius: 7px;
+   cursor: pointer;
+   display: none;
+}
+.visible{
+   display: block;
+}
+.hide{
+   display: none;
+}
+.dropDownMenu p:hover{
+   background-color: #eaeaea;
+}
+.dropDownMenu p:active{
+   background-color: #cacaca;
+}
 /* messageInput */
 .messageInput{
    width: 100%;

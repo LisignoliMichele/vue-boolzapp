@@ -88,9 +88,15 @@
                   <div class="chatRoom">
                      <div class="messages">
                         <ul>
-                           <li v-for="(message) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}">
+                           <li v-for="(message) in contacts[contactIndex].messages" :class="{sented: message.status == 'sent'}" @mouseleave="show = '' ">
                               {{message.message}}
                               <time>{{message.date}}</time>
+                              <div class="messageSettings">
+                                 <i @click="toggleShow" class="fas fa-sort-down"></i>
+                                 <div :class="show" class="dropDownMenu">
+                                    <p>Elimina messaggio</p>
+                                 </div>
+                              </div>
                            </li>
                         </ul>
                      </div>
