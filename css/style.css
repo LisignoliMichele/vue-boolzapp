@@ -148,7 +148,6 @@
    display: flex;
    border-top: 1px solid #EAEAEA;
    align-items: center;
-   overflow: scroll;
 }
 .contact-list li img{
    margin-left: 25px;
